@@ -1,0 +1,19 @@
+//IconButton styles
+$iconSize: 40%;
+$leftAndBottom: (100% - $iconSize) / 2;
+
+.btn-container {
+  position: relative;
+  width: 10%;
+  img {
+    display: block;
+    width: 100%;
+  }
+  .btn-icon {
+    position: absolute;
+    bottom: $leftAndBottom;
+    left: $leftAndBottom;
+    width: $iconSize;
+    height: $iconSize;
+  }
+}

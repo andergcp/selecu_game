@@ -1,1 +1,0 @@
-# selecu_game
