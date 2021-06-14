@@ -2,14 +2,4 @@
 @import "./styles/_unsplash";
 @import "./styles/_housesContainer";
 @import "./styles/_panel";
-
-.white-background {
-  height: 50rem;
-  justify-content: center;
-  display: flex;
-}
-
-.image-background {
-  @extend .white-background;
-  background-image: url("./resources/background.jpg");
-}
+@import "./styles/game";

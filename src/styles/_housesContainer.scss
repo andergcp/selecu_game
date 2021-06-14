@@ -1,15 +1,19 @@
+$houseMaxWith: 20%;
+$houseMaxWithHover: $houseMaxWith * 1.5;
+
 .houses-container {
-  position: absolute;
-  width: 80%;
-  height: 30%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 10%;
+  height: 100%;
   .btn-house {
-    max-width: 20%;
+    max-width: $houseMaxWith;
     max-height: 80%;
     position: relative;
     margin: auto;
+  }
+  .btn-house:hover {
+    cursor: pointer;
+    max-width: $houseMaxWithHover;
   }
 }

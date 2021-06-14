@@ -1,0 +1,19 @@
+.white-background {
+  height: 100%;
+}
+
+.image-background {
+  @extend .white-background;
+  background-image: url("../resources/background.jpg");
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.h-50 {
+  height: 50%;
+}

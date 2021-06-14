@@ -1,22 +1,56 @@
+$panelWidth: 800px;
+$toggleDimenssions: $panelWidth * 0.25;
+$panelImgWidth: $panelWidth * 0.8;
+$iconBtnsWidth: $panelWidth * 0.4;
+
 .panel {
-  position: absolute;
-  width: 100%;
-  height: 25%;
+  width: $panelWidth;
+  height: auto;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  bottom: 10%;
   flex-direction: column;
+
+  @media (max-width: 576px) {
+    width: 500px;
+    margin: auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 600px;
+    margin: auto;
+  }
+
+  @media (max-width: 992px) {
+    width: 700px;
+    margin: auto;
+  }
+  @media (max-width: 1200px) {
+    width: 800px;
+    margin: auto;
+  }
+
   .toggle {
-    position: relative;
-    top: 0;
-    max-width: 20%;
-    max-height: 20%;
-    position: relative;
+    position: absolute;
+    bottom: 128px;
+    max-width: $toggleDimenssions;
+    max-height: $toggleDimenssions;
   }
   .panel-img {
-    margin-top: -5%;
-    max-width: 80%;
-    position: relative;
+    position: absolute;
+    bottom: 0%;
+    margin-top: 0%;
+    width: $panelImgWidth;
   }
+  .icon-btns {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: $iconBtnsWidth;
+  }
+}
+
+.hidden-panel {
+  @extend .panel;
 }
