@@ -3,54 +3,73 @@ $toggleDimenssions: $panelWidth * 0.25;
 $panelImgWidth: $panelWidth * 0.8;
 $iconBtnsWidth: $panelWidth * 0.4;
 
-.panel {
-  width: $panelWidth;
-  height: auto;
+.bottom-section {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex-direction: column;
-
-  @media (max-width: 576px) {
-    width: 500px;
-    margin: auto;
-  }
-
-  @media (max-width: 768px) {
-    width: 600px;
-    margin: auto;
-  }
-
-  @media (max-width: 992px) {
-    width: 700px;
-    margin: auto;
-  }
-  @media (max-width: 1200px) {
-    width: 800px;
-    margin: auto;
-  }
-
-  .toggle {
-    position: absolute;
-    bottom: 128px;
-    max-width: $toggleDimenssions;
-    max-height: $toggleDimenssions;
-  }
-  .panel-img {
-    position: absolute;
-    bottom: 0%;
-    margin-top: 0%;
-    width: $panelImgWidth;
-  }
-  .icon-btns {
-    position: absolute;
-    bottom: 30px;
+  .panel {
+    width: $panelWidth;
+    height: auto;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: $iconBtnsWidth;
-  }
-}
+    flex-direction: column;
+    margin-bottom: 0;
+    @media (max-width: 576px) {
+      width: 500px;
+      // margin: auto;
+    }
 
-.hidden-panel {
-  @extend .panel;
+    @media (max-width: 768px) {
+      width: 600px;
+      // margin: auto;
+    }
+
+    @media (max-width: 992px) {
+      width: 700px;
+      // margin: auto;
+    }
+    @media (max-width: 1200px) {
+      width: 800px;
+      // margin: auto;
+    }
+
+    .toggle {
+      position: absolute;
+      bottom: 128px;
+      max-width: $toggleDimenssions;
+      max-height: $toggleDimenssions;
+    }
+    .panel-img {
+      position: absolute;
+      bottom: 0%;
+      margin-top: 0%;
+      width: $panelImgWidth;
+    }
+    .icon-btns {
+      position: absolute;
+      bottom: 30px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: $iconBtnsWidth;
+    }
+  }
+
+  .hidden-panel {
+    @extend .panel;
+  }
+
+  .btn-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    .btn {
+      max-width: 30%;
+    }
+  }
 }

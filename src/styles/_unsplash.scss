@@ -1,6 +1,11 @@
-$size: 30%;
+$size: 60%;
 
-.unsplash-img {
-  width: $size;
-  height: $size;
+.unsplash-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .unsplash-img {
+    width: $size;
+    height: $size;
+  }
 }

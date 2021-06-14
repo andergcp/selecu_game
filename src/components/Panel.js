@@ -15,19 +15,17 @@ export default function Panel({ icons }) {
     return iconsArray;
   };
   return (
-    <>
-      <div className={panelClass}>
-        <img
-          alt="esconder o mostrar panel"
-          src={toggle}
-          className="toggle"
-          onClick={() =>
-            setPanelClass(panelClass === "panel" ? "hidden-panel" : "panel")
-          }
-        ></img>
-        <img alt="panel de control" src={imgPanel} className="panel-img"></img>
-        <div className="icon-btns">{displayIcons(icons)}</div>
-      </div>
-    </>
+    <div className={panelClass}>
+      <img
+        alt="esconder o mostrar panel"
+        src={toggle}
+        className="toggle"
+        onClick={() =>
+          setPanelClass(panelClass === "panel" ? "hidden-panel" : "panel")
+        }
+      ></img>
+      <img alt="panel de control" src={imgPanel} className="panel-img"></img>
+      <div className="icon-btns">{displayIcons(icons)}</div>
+    </div>
   );
 }
