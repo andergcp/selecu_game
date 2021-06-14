@@ -4,7 +4,7 @@ import toggle from "../resources/toggle.png";
 import { useState } from "react";
 
 export default function Panel({ icons }) {
-  const [panelClass, setPanelClass] = useState("panel");
+  const [panelDisplay, setPanelDisplay] = useState(true);
   const displayIcons = (numIcons) => {
     let iconsArray = [];
     while (numIcons > 0) {
@@ -15,17 +15,23 @@ export default function Panel({ icons }) {
     return iconsArray;
   };
   return (
-    <div className={panelClass}>
-      <img
-        alt="esconder o mostrar panel"
-        src={toggle}
-        className="toggle"
-        onClick={() =>
-          setPanelClass(panelClass === "panel" ? "hidden-panel" : "panel")
-        }
-      ></img>
-      <img alt="panel de control" src={imgPanel} className="panel-img"></img>
-      <div className="icon-btns">{displayIcons(icons)}</div>
+    <div>
+      <div className="panel">
+        <img
+          alt="esconder o mostrar panel"
+          src={toggle}
+          className={`toggle ${panelDisplay ? "no-hidden" : "toggleBottom"}`}
+          onClick={() => setPanelDisplay(!panelDisplay)}
+        ></img>
+        <img
+          alt="panel de control"
+          src={imgPanel}
+          className={`panel-img ${panelDisplay ? "no-hidden" : "hidden"}`}
+        ></img>
+        <div className={`icon-btns ${panelDisplay ? "no-hidden" : "hidden"}`}>
+          {displayIcons(icons)}
+        </div>
+      </div>
     </div>
   );
 }

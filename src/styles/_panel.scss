@@ -54,12 +54,15 @@ $iconBtnsWidth: $panelWidth * 0.4;
       align-items: center;
       width: $iconBtnsWidth;
     }
-  }
 
-  .hidden-panel {
-    @extend .panel;
-  }
+    .hidden {
+      display: none;
+    }
 
+    .toggleBottom {
+      bottom: 0px;
+    }
+  }
   .btn-bottom {
     display: flex;
     justify-content: space-between;
